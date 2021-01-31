@@ -1,13 +1,14 @@
 **Regression Test Selection Tool**
 
-This project includes the programs that generate the test case models for the following case studies:
+The project includes a generic program that be can edited to apply our framework on other model transformation programs. The name of the program is **ReadEUnitFile_General.java**
+
+In addition, this project includes the programs that generate the test case models for the following case studies:
 
 1. The OO2DB transformation program case study.
 2. The QN2QPN transformation program case study.
 3. The BibTeX2DocBook transformation program case study.
 4. The CPL2SPL transformation program case study.
 
-In addition, the project includes a generic program that be can edited to apply our framework on other model transformation programs. The name of the program is ReadEUnitFile_General.java 
 
 Each program does the following:
 
@@ -27,11 +28,7 @@ Note that the following output is displayed on the console when the program is r
 
 This output is useful for debugging purposes. The mappings are used to generate the output files and the test case models.
 
-The following external JARs need to be added to the project&#39;s build path:
-
-- org.eclipse.emf.common\_2.14.0.v20180527-1134.jar ([https://jar-download.com/?search\_box=org.eclipse.emf.common](https://jar-download.com/?search_box=org.eclipse.emf.common))
-- commons-lang3-3.0.jar ([http://www.java2s.com/Code/Jar/c/Downloadcommonslang3301jar.htm](http://www.java2s.com/Code/Jar/c/Downloadcommonslang3301jar.htm))
-- epsilon-1.5.1-kitchensink.jar ([http://mirror1.ku.ac.th/eclipse/epsilon/jars/](http://mirror1.ku.ac.th/eclipse/epsilon/jars/))
+Gradle build file is included. The ReadEUnitFile_General.java program can be run by executing Gradle's build followed by run tasks. Dependencies are handled by Gradle. To set different parameters in the ReadEUnitFile_General (such as the model names, ATL program name, input and ouput meta-model names), edit the properties in the Gradle build file. Detailed explanations of how the program works and the configuration parameters are provided in ReadEUnitFile_General.java.
 
 **Note:** The test environment containing the test cases, their models, and the EUnit files used in the paper can be downloaded from: 
 https://github.com/ialazzon/TestEnvironment
