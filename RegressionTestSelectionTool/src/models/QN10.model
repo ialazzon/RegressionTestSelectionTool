@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<MultiClassQN:QNM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:MultiClassQN="MultiClassQN" xmi:id="_FJ888MWkEeqfLINjNtyVdw">
+  <workloads xmi:id="_IvI68MWkEeqfLINjNtyVdw" numOfJobs="10" serviceRequest="_NUXZoMWkEeqfLINjNtyVdw" name="Workload1"/>
+  <nodes xsi:type="MultiClassQN:Server" xmi:id="_G3ljcMWkEeqfLINjNtyVdw" name="Server1" serviceRequest="_NUXZoMWkEeqfLINjNtyVdw" workload="_IvI68MWkEeqfLINjNtyVdw"/>
+  <serviceRequests xmi:id="_NUXZoMWkEeqfLINjNtyVdw" server="_G3ljcMWkEeqfLINjNtyVdw" workload="_IvI68MWkEeqfLINjNtyVdw">
+    <serviceParams>0.5</serviceParams>
+  </serviceRequests>
+</MultiClassQN:QNM>

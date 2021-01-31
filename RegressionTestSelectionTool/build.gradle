@@ -1,0 +1,123 @@
+plugins {
+    // Apply the java-library plugin for API and implementation separation.
+    id 'java-library'
+}
+
+repositories {
+
+    mavenCentral()
+}
+
+
+configurations {
+    // configuration that holds jars to include in the jar
+    extraLibs
+}
+
+
+dependencies {
+    // Use JUnit test framework.
+    testImplementation 'junit:junit:4.13'
+
+    // This dependency is exported to consumers, that is to say found on their compile classpath.
+    api 'org.apache.commons:commons-math3:3.6.1'
+
+    // This dependency is used internally, and not exposed to consumers on their own compile classpath.
+    implementation 'com.google.guava:guava:29.0-jre'
+    
+   
+	compile group: 'org.eclipse.emf', name: 'org.eclipse.emf.ecore', version: '2.23.0'
+	compile group: 'org.eclipse.emf', name: 'org.eclipse.emf.common', version: '2.21.0'
+	compile group: 'org.eclipse.emf', name: 'org.eclipse.emf.ecore.xmi', version: '2.16.0'
+	
+	
+	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.10'
+	
+	
+    compile group: 'org.eclipse.epsilon', name: 'org.eclipse.epsilon.eol.engine', version: '2.2.0'
+    
+    extraLibs group: 'org.eclipse.emf', name: 'org.eclipse.emf.ecore', version: '2.23.0'
+    extraLibs group: 'org.eclipse.emf', name: 'org.eclipse.emf.common', version: '2.21.0'
+    extraLibs group: 'org.eclipse.emf', name: 'org.eclipse.emf.ecore.xmi', version: '2.16.0'
+    extraLibs group: 'org.apache.commons', name: 'commons-lang3', version: '3.10'
+    extraLibs group: 'org.eclipse.epsilon', name: 'org.eclipse.epsilon.eol.engine', version: '2.2.0'
+	
+}
+
+
+
+
+jar {
+    archiveBaseName = 'RegressionTestSelectionTool-gradle'
+    archiveVersion =  '0.1.0'
+    
+    manifest {
+        attributes(
+                'Main-Class': 'ReadEUnitFile_General'
+        )
+    }
+    
+    from {
+            configurations.extraLibs.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    
+}
+
+jar {
+    archiveBaseName = 'RegressionTestSelectionTool-gradle'
+    archiveVersion =  '0.1.0'
+    
+    manifest {
+        attributes(
+                'Main-Class': 'ReadEUnitFile_General'
+        )
+    }
+    
+    from {
+            configurations.extraLibs.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    
+}
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+def eunit_file_path = "eunit/mytest_QN2QPN.eunit"
+def atl_file_path = "ATLPrograms/MultiClassQN2QPN.atl"
+def output_model_file_path = "output/testCaseSet.model"
+def theChangedRule = "Main"
+def input_metamodel_name = "QN"
+def output_metamodel_name = "QPN"
+
+task generateGradleValuesJava {
+  	
+    //DEFINE THE PARAMETERS FOR ReadEUnitFile_General
+    def java =
+      'public class Configuration {' +
+      '  public static String eunit_file_path = \"' + eunit_file_path + '\"; \n' +
+      '  public static String atl_file_path = \"' + atl_file_path + '\"; \n' +
+      '  public static String output_model_file_path = \"' + output_model_file_path + '\"; \n' +
+      '  public static String theChangedRule = \"' + theChangedRule + '\"; \n' +
+      '  public static String input_metamodel_name =  \"' + input_metamodel_name + '\"; \n' +
+      '  public static String output_metamodel_name =  \"' + output_metamodel_name + '\"; \n' +
+      '  }';
+    def javaFile = new File(projectDir.path+"/src","Configuration.java")
+    javaFile.write(java)
+}
+
+sourceSets.main.java.srcDirs = ['src']
+
+task copyModels(type: Copy) {
+	from "src/models" 
+    into "build/classes/java/main/models"
+}
+
+
+compileJava.dependsOn generateGradleValuesJava
+compileJava.dependsOn copyModels
+
+
+
+
+
+mainClassName = 'ReadEUnitFile_General' 

@@ -1,0 +1,175 @@
+@test
+operation compareModel() {
+runTarget("atl64");
+assertEqualModels("Output_SPL64","SPL64");
+}
+@test
+operation compareModel() {
+runTarget("atl85");
+assertEqualModels("Output_SPL85","SPL85");
+}
+@test
+operation compareModel() {
+runTarget("atl22");
+assertEqualModels("Output_SPL22","SPL22");
+}
+@test
+operation compareModel() {
+runTarget("atl14");
+assertEqualModels("Output_SPL14","SPL14");
+}
+@test
+operation compareModel() {
+runTarget("atl63");
+assertEqualModels("Output_SPL63","SPL63");
+}
+@test
+operation compareModel() {
+runTarget("atl72");
+assertEqualModels("Output_SPL72","SPL72");
+}
+@test
+operation compareModel() {
+runTarget("atl53");
+assertEqualModels("Output_SPL53","SPL53");
+}
+@test
+operation compareModel() {
+runTarget("atl86");
+assertEqualModels("Output_SPL86","SPL86");
+}
+@test
+operation compareModel() {
+runTarget("atl69");
+assertEqualModels("Output_SPL69","SPL69");
+}
+@test
+operation compareModel() {
+runTarget("atl32");
+assertEqualModels("Output_SPL32","SPL32");
+}
+@test
+operation compareModel() {
+runTarget("atl49");
+assertEqualModels("Output_SPL49","SPL49");
+}
+@test
+operation compareModel() {
+runTarget("atl45");
+assertEqualModels("Output_SPL45","SPL45");
+}
+@test
+operation compareModel() {
+runTarget("atl98");
+assertEqualModels("Output_SPL98","SPL98");
+}
+@test
+operation compareModel() {
+runTarget("atl57");
+assertEqualModels("Output_SPL57","SPL57");
+}
+@test
+operation compareModel() {
+runTarget("atl34");
+assertEqualModels("Output_SPL34","SPL34");
+}
+@test
+operation compareModel() {
+runTarget("atl39");
+assertEqualModels("Output_SPL39","SPL39");
+}
+@test
+operation compareModel() {
+runTarget("atl26");
+assertEqualModels("Output_SPL26","SPL26");
+}
+@test
+operation compareModel() {
+runTarget("atl27");
+assertEqualModels("Output_SPL27","SPL27");
+}
+@test
+operation compareModel() {
+runTarget("atl25");
+assertEqualModels("Output_SPL25","SPL25");
+}
+@test
+operation compareModel() {
+runTarget("atl43");
+assertEqualModels("Output_SPL43","SPL43");
+}
+@test
+operation compareModel() {
+runTarget("atl56");
+assertEqualModels("Output_SPL56","SPL56");
+}
+@test
+operation compareModel() {
+runTarget("atl94");
+assertEqualModels("Output_SPL94","SPL94");
+}
+@test
+operation compareModel() {
+runTarget("atl44");
+assertEqualModels("Output_SPL44","SPL44");
+}
+@test
+operation compareModel() {
+runTarget("atl77");
+assertEqualModels("Output_SPL77","SPL77");
+}
+@test
+operation compareModel() {
+runTarget("atl99");
+assertEqualModels("Output_SPL99","SPL99");
+}
+@test
+operation compareModel() {
+runTarget("atl78");
+assertEqualModels("Output_SPL78","SPL78");
+}
+@test
+operation compareModel() {
+runTarget("atl31");
+assertEqualModels("Output_SPL31","SPL31");
+}
+@test
+operation compareModel() {
+runTarget("atl13");
+assertEqualModels("Output_SPL13","SPL13");
+}
+@test
+operation compareModel() {
+runTarget("atl11");
+assertEqualModels("Output_SPL11","SPL11");
+}
+@test
+operation compareModel() {
+runTarget("atl20");
+assertEqualModels("Output_SPL20","SPL20");
+}
+@test
+operation compareModel() {
+runTarget("atl40");
+assertEqualModels("Output_SPL40","SPL40");
+}
+@test
+operation compareModel() {
+runTarget("atl82");
+assertEqualModels("Output_SPL82","SPL82");
+}
+@test
+operation compareModel() {
+runTarget("atl80");
+assertEqualModels("Output_SPL80","SPL80");
+}
+@test
+operation compareModel() {
+runTarget("atl79");
+assertEqualModels("Output_SPL79","SPL79");
+}
+@test
+operation compareModel() {
+runTarget("atl91");
+assertEqualModels("Output_SPL91","SPL91");
+}

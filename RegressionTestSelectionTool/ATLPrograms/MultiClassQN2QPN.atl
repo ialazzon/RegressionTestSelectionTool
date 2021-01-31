@@ -1,0 +1,163 @@
+module MultiClassQN2QPN; 
+create OUT : MultiClassQPN from IN : MultiClassQN; 
+
+helper def: allArcs : Set(MultiClassQN!Arc) =  
+	MultiClassQN!Arc.allInstances()->asOrderedSet();
+
+	
+helper def: allSourceNodes : Set(MultiClassQN!SourceNode) = 
+	MultiClassQN!SourceNode.allInstances()->asOrderedSet();
+
+rule Main {
+	from qn : MultiClassQN!QNM
+	to 
+		qpn : MultiClassQPN!QPN (
+			places <- qn.nodes,
+			transitions <- qn.arcs,
+			modes <- qn.workloadRoutings,
+			colors <- qn.workloads,
+			serviceDemands <- qn.serviceRequests,
+			arcs <- thisModule.allArcs
+						->collect(e | thisModule.resolveTemp(e, 'qpn_ia'))
+						->union(
+							thisModule.allArcs
+							->collect(e | thisModule.resolveTemp(e, 'qpn_oa'))
+							)
+							->union(
+							thisModule.allSourceNodes
+							->collect(e | thisModule.resolveTemp(e, 'qpn_oas'))
+							)
+						
+		)
+}
+
+rule Server {
+	from qn_s : MultiClassQN!Server
+	to 
+		qpn_qp : MultiClassQPN!QueueingPlace (
+			name <- qn_s.name,
+			schedulingPolicy <- qn_s.schedulingPolicy,
+			color <- qn_s.workload,
+			incoming <-	qn_s.incoming
+							->collect(e | thisModule.resolveTemp(e, 'qpn_oa')),
+			outgoing <- qn_s.outgoing
+							->collect(e | thisModule.resolveTemp(e, 'qpn_ia'))
+		) 
+}
+
+rule SourceNode {
+	from qn_s : MultiClassQN!SourceNode
+	to 
+		qpn_qp : MultiClassQPN!QueueingPlace (
+			name <- qn_s.name,
+			schedulingPolicy <- #IS,
+			serviceDistribution <- qn_s.arrivalDistribution,
+			serviceParams <- qn_s.arrivalParams,
+			numOfTokens <- 1,
+			color <- qn_s.workload,
+			incoming <-	thisModule.resolveTemp(qn_s, 'qpn_oas'),
+			outgoing <- qn_s.outgoing
+							->collect(e | thisModule.resolveTemp(e, 'qpn_ia'))
+		),
+		qpn_oas :  MultiClassQPN!TransToPlaceArc ( 
+			source <- qn_s.outgoing
+							->collect(e | thisModule.resolveTemp(e, 'qpn_t'))->first(),
+							
+			target <- thisModule.resolveTemp(qn_s, 'qpn_qp')
+		)
+}
+
+
+rule SinkNode {
+	from qn_s : MultiClassQN!SinkNode
+	to 
+		qpn_op :MultiClassQPN!OrdinaryPlace (
+			name <- qn_s.name,
+			color <- qn_s.workload,
+			incoming <-	qn_s.incoming
+							->collect(e | thisModule.resolveTemp(e, 'qpn_oa')),
+			outgoing <- qn_s.outgoing
+							->collect(e | thisModule.resolveTemp(e, 'qpn_ia'))
+		) 
+}
+
+rule NonServerNode {
+	from qn_s : MultiClassQN!NonServerNode
+	to 
+		qpn_op : MultiClassQPN!OrdinaryPlace (
+			name <- qn_s.name,
+			numOfTokens <- qn_s.workload.numOfJobs, 
+			color <- qn_s.workload,
+			incoming <-	qn_s.incoming
+							->collect(e | thisModule.resolveTemp(e, 'qpn_oa')),
+			outgoing <- qn_s.outgoing
+							->collect(e | thisModule.resolveTemp(e, 'qpn_ia'))
+		)
+}
+
+rule ThinkDevice {
+	from qn_s : MultiClassQN!ThinkDevice
+	to 
+		qpn_op : MultiClassQPN!QueueingPlace (
+			name <- qn_s.name,
+			schedulingPolicy <- #IS,
+			serviceDistribution <- #Exponential,
+			serviceParams <- Sequence{qn_s.thinkTime},
+			numOfTokens <- qn_s.workload.numOfJobs,
+			color <- qn_s.workload,
+			incoming <-	qn_s.incoming
+							->collect(e | thisModule.resolveTemp(e, 'qpn_oa')),
+			outgoing <- qn_s.outgoing
+							->collect(e | thisModule.resolveTemp(e, 'qpn_ia'))
+		)
+}
+
+
+rule Arc {
+	from qnm_a : MultiClassQN!Arc
+	to 
+		qpn_t : MultiClassQPN!Transition (
+			--weight <- qnm_a.probability,
+			incoming <- qpn_ia,
+			outgoing <- qpn_oa
+		),
+		
+		qpn_ia : MultiClassQPN!PlaceToTransArc (
+			source <- qnm_a.source,
+			target <- qpn_t
+		),
+		
+		qpn_oa : MultiClassQPN!TransToPlaceArc (
+			source <- qpn_t,
+			target <- qnm_a.target
+		)
+}
+
+rule ServiceRequest {
+	from qn_sr : MultiClassQN!ServiceRequest
+	to 
+		qpn_sd : MultiClassQPN!ServiceDemand (
+			serviceDistribution <- qn_sr.serviceDistribution,
+			serviceParams <- qn_sr.serviceParams,
+			queueingPlace <- qn_sr.server,
+			color <- qn_sr.workload
+		)
+}
+
+rule WorkloadRouting {
+	from qn_wr : MultiClassQN!WorkloadRouting
+	to 
+		qpn_m : MultiClassQPN!Mode (
+			weight <- qn_wr.probability,
+			transition <- qn_wr.arc,
+			color <- qn_wr.workload
+		)
+}
+
+rule Workload {
+	from qn_w : MultiClassQN!Workload
+	to 
+		qpn_c : MultiClassQPN!Color (
+			name <- qn_w.name
+		)
+}

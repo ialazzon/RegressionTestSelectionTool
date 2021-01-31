@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ASCII"?>
+<MultiClassQN:QNM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:MultiClassQN="MultiClassQN" xmi:id="_8kgNYMQfEeqjnbGjOvoMJA">
+  <nodes xsi:type="MultiClassQN:SourceNode" xmi:id="_-MZ_UMQfEeqjnbGjOvoMJA" name="Source1">
+    <arrivalParams>5.0</arrivalParams>
+  </nodes>
+</MultiClassQN:QNM>

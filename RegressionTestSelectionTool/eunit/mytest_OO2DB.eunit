@@ -1,0 +1,90 @@
+@test
+operation transformationWorksAsExpected() {
+  runTarget("OO2DB1");
+  assertEqualModels("DBExpected1", "DB1");
+}
+
+@test
+operation transformationWorksAsExpected() {
+  runTarget("OO2DB2");
+  assertEqualModels("DBExpected2", "DB2");
+}
+
+@test
+operation transformationWorksAsExpected() {
+  runTarget("OO2DB3");
+  assertEqualModels("DBExpected3", "DB3");
+}
+
+@test
+operation transformationWorksAsExpected() {
+  runTarget("OO2DB4");
+  assertEqualModels("DBExpected4", "DB4");
+}
+
+@test
+operation transformationWorksAsExpected() {
+  runTarget("OO2DB5");
+  assertEqualModels("DBExpected5", "DB5");
+}
+
+@test
+operation transformationWorksAsExpected() {
+  runTarget("OO2DB6");
+  assertEqualModels("DBExpected6", "DB6");
+}
+
+@test
+operation transformationWorksAsExpected() {
+  runTarget("OO2DB7");
+  assertEqualModels("DBExpected7", "DB7");
+}
+
+@test
+operation transformationWorksAsExpected() {
+  runTarget("OO2DB8");
+  assertEqualModels("DBExpected8", "DB8");
+}
+
+@test
+operation transformationWorksAsExpected() {
+  runTarget("OO2DB9");
+  assertEqualModels("DBExpected9", "DB9");
+}
+
+@test
+operation transformationWorksAsExpected() {
+  runTarget("OO2DB10");
+  assertEqualModels("DBExpected10", "DB10");
+}
+
+@test
+operation transformationWorksAsExpected() {
+  runTarget("OO2DB11");
+  assertEqualModels("DBExpected11", "DB11");
+}
+
+@test
+operation transformationWorksAsExpected() {
+  runTarget("OO2DB12");
+  assertEqualModels("DBExpected12", "DB12");
+}
+
+@test
+operation transformationWorksAsExpected() {
+  runTarget("OO2DB13");
+  assertEqualModels("DBExpected13", "DB13");
+}
+
+@test
+operation transformationWorksAsExpected() {
+  runTarget("OO2DB14");
+  assertEqualModels("DBExpected14", "DB14");
+}
+
+@test
+operation transformationWorksAsExpected() {
+  runTarget("OO2DB15");
+  assertEqualModels("DBExpected15", "DB15");
+}
+

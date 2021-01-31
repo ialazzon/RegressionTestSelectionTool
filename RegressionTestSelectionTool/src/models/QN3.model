@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ASCII"?>
+<MultiClassQN:QNM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:MultiClassQN="MultiClassQN" xmi:id="_MrYuMMQcEeqjnbGjOvoMJA">
+  <workloads xmi:id="_OC6h0MQcEeqjnbGjOvoMJA" numOfJobs="30" name="Workload1"/>
+</MultiClassQN:QNM>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ASCII"?>
+<MultiClassQN:QNM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:MultiClassQN="MultiClassQN" xmi:id="_6gIcsMHAEeqT7Z6fjX4C1Q">
+  <workloads xmi:id="_RXLs8MHBEeqT7Z6fjX4C1Q" numOfJobs="100" serviceRequest="_XWiAQMHBEeqT7Z6fjX4C1Q" workloadRouting="_e2Nd4MHBEeqT7Z6fjX4C1Q _Lkq6wMHMEeqT7Z6fjX4C1Q _YHhNcMp2Eeq4JrXQANNsFA _hRseAMp2Eeq4JrXQANNsFA" name="Workload1"/>
+  <nodes xsi:type="MultiClassQN:SourceNode" xmi:id="_JNwHsMHBEeqT7Z6fjX4C1Q" name="Source1" outgoing="_OAkWcMHBEeqT7Z6fjX4C1Q _RlE0IMp2Eeq4JrXQANNsFA"/>
+  <nodes xsi:type="MultiClassQN:Server" xmi:id="_LCnXkMHBEeqT7Z6fjX4C1Q" name="Server1" outgoing="_jSLS4MHBEeqT7Z6fjX4C1Q" serviceRequest="_XWiAQMHBEeqT7Z6fjX4C1Q"/>
+  <nodes xsi:type="MultiClassQN:Server" xmi:id="_MpFmIMHBEeqT7Z6fjX4C1Q" name="Sink1" incoming="_OAkWcMHBEeqT7Z6fjX4C1Q _jSLS4MHBEeqT7Z6fjX4C1Q _caQN8Mp2Eeq4JrXQANNsFA"/>
+  <nodes xsi:type="MultiClassQN:Server" xmi:id="_LbdxkMp2Eeq4JrXQANNsFA" name="Server2" outgoing="_caQN8Mp2Eeq4JrXQANNsFA" incoming="_RlE0IMp2Eeq4JrXQANNsFA" workload="_RXLs8MHBEeqT7Z6fjX4C1Q"/>
+  <arcs xmi:id="_OAkWcMHBEeqT7Z6fjX4C1Q" source="_JNwHsMHBEeqT7Z6fjX4C1Q" target="_MpFmIMHBEeqT7Z6fjX4C1Q" WorkloadRouting="_e2Nd4MHBEeqT7Z6fjX4C1Q" name="Arc1"/>
+  <arcs xmi:id="_jSLS4MHBEeqT7Z6fjX4C1Q" source="_LCnXkMHBEeqT7Z6fjX4C1Q" target="_MpFmIMHBEeqT7Z6fjX4C1Q" WorkloadRouting="_Lkq6wMHMEeqT7Z6fjX4C1Q" name="Arc2"/>
+  <arcs xmi:id="_RlE0IMp2Eeq4JrXQANNsFA" source="_JNwHsMHBEeqT7Z6fjX4C1Q" target="_LbdxkMp2Eeq4JrXQANNsFA" WorkloadRouting="_YHhNcMp2Eeq4JrXQANNsFA" name="Arc3"/>
+  <arcs xmi:id="_caQN8Mp2Eeq4JrXQANNsFA" source="_LbdxkMp2Eeq4JrXQANNsFA" target="_MpFmIMHBEeqT7Z6fjX4C1Q" WorkloadRouting="_hRseAMp2Eeq4JrXQANNsFA" name="Arc4"/>
+  <serviceRequests xmi:id="_XWiAQMHBEeqT7Z6fjX4C1Q" server="_LCnXkMHBEeqT7Z6fjX4C1Q" workload="_RXLs8MHBEeqT7Z6fjX4C1Q">
+    <serviceParams>30.0</serviceParams>
+  </serviceRequests>
+  <workloadRoutings xmi:id="_e2Nd4MHBEeqT7Z6fjX4C1Q" probability="0.5" arc="_OAkWcMHBEeqT7Z6fjX4C1Q" workload="_RXLs8MHBEeqT7Z6fjX4C1Q"/>
+  <workloadRoutings xmi:id="_Lkq6wMHMEeqT7Z6fjX4C1Q" probability="1.0" arc="_jSLS4MHBEeqT7Z6fjX4C1Q" workload="_RXLs8MHBEeqT7Z6fjX4C1Q"/>
+  <workloadRoutings xmi:id="_YHhNcMp2Eeq4JrXQANNsFA" probability="0.5" arc="_RlE0IMp2Eeq4JrXQANNsFA" workload="_RXLs8MHBEeqT7Z6fjX4C1Q"/>
+  <workloadRoutings xmi:id="_hRseAMp2Eeq4JrXQANNsFA" probability="1.0" arc="_caQN8Mp2Eeq4JrXQANNsFA" workload="_RXLs8MHBEeqT7Z6fjX4C1Q"/>
+</MultiClassQN:QNM>

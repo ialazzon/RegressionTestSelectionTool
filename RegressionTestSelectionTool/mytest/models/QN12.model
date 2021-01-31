@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ASCII"?>
+<MultiClassQN:QNM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:MultiClassQN="MultiClassQN" xmi:id="_r3HfUMZqEeqIAf0mIP0WqA">
+  <workloads xmi:id="_wtZRwMZqEeqIAf0mIP0WqA" numOfJobs="100" name="Workload1"/>
+  <nodes xsi:type="MultiClassQN:SourceNode" xmi:id="_s6GmUMZqEeqIAf0mIP0WqA" name="SourceNode1" workload="_wtZRwMZqEeqIAf0mIP0WqA">
+    <arrivalParams>0.5</arrivalParams>
+  </nodes>
+</MultiClassQN:QNM>

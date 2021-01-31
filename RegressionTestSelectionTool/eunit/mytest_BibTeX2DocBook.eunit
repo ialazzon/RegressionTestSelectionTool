@@ -1,0 +1,125 @@
+@test
+operation compareModel() {
+runTarget("atl84");
+assertEqualModels("Output_DocBook84","DocBook84");
+}
+@test
+operation compareModel() {
+runTarget("atl65");
+assertEqualModels("Output_DocBook65","DocBook65");
+}
+@test
+operation compareModel() {
+runTarget("atl30");
+assertEqualModels("Output_DocBook30","DocBook30");
+}
+@test
+operation compareModel() {
+runTarget("atl39");
+assertEqualModels("Output_DocBook39","DocBook39");
+}
+@test
+operation compareModel() {
+runTarget("atl48");
+assertEqualModels("Output_DocBook48","DocBook48");
+}
+@test
+operation compareModel() {
+runTarget("atl37");
+assertEqualModels("Output_DocBook37","DocBook37");
+}
+@test
+operation compareModel() {
+runTarget("atl98");
+assertEqualModels("Output_DocBook98","DocBook98");
+}
+@test
+operation compareModel() {
+runTarget("atl25");
+assertEqualModels("Output_DocBook25","DocBook25");
+}
+@test
+operation compareModel() {
+runTarget("atl13");
+assertEqualModels("Output_DocBook13","DocBook13");
+}
+@test
+operation compareModel() {
+runTarget("atl80");
+assertEqualModels("Output_DocBook80","DocBook80");
+}
+@test
+operation compareModel() {
+runTarget("atl21");
+assertEqualModels("Output_DocBook21","DocBook21");
+}
+@test
+operation compareModel() {
+runTarget("atl11");
+assertEqualModels("Output_DocBook11","DocBook11");
+}
+@test
+operation compareModel() {
+runTarget("atl51");
+assertEqualModels("Output_DocBook51","DocBook51");
+}
+@test
+operation compareModel() {
+runTarget("atl91");
+assertEqualModels("Output_DocBook91","DocBook91");
+}
+@test
+operation compareModel() {
+runTarget("atl5");
+assertEqualModels("Output_DocBook5","DocBook5");
+}
+@test
+operation compareModel() {
+runTarget("atl85");
+assertEqualModels("Output_DocBook85","DocBook85");
+}
+@test
+operation compareModel() {
+runTarget("atl97");
+assertEqualModels("Output_DocBook97","DocBook97");
+}
+@test
+operation compareModel() {
+runTarget("atl76");
+assertEqualModels("Output_DocBook76","DocBook76");
+}
+@test
+operation compareModel() {
+runTarget("atl61");
+assertEqualModels("Output_DocBook61","DocBook61");
+}
+@test
+operation compareModel() {
+runTarget("atl56");
+assertEqualModels("Output_DocBook56","DocBook56");
+}
+@test
+operation compareModel() {
+runTarget("atl53");
+assertEqualModels("Output_DocBook53","DocBook53");
+}
+@test
+operation compareModel() {
+runTarget("atl67");
+assertEqualModels("Output_DocBook67","DocBook67");
+}
+@test
+operation compareModel() {
+runTarget("atl36");
+assertEqualModels("Output_DocBook36","DocBook36");
+}
+@test
+operation compareModel() {
+runTarget("atl52");
+assertEqualModels("Output_DocBook52","DocBook52");
+}
+@test
+operation compareModel() {
+runTarget("atl58");
+assertEqualModels("Output_DocBook58","DocBook58");
+}

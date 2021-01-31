@@ -1,0 +1,203 @@
+@test
+operation compareModel() {
+  runTarget("atl1");
+  assertEqualModels("QPN1Expected", "QPN1");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl2");
+  assertEqualModels("QPN2Expected", "QPN2");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl3");
+  assertEqualModels("QPN3Expected", "QPN3");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl4");
+  assertEqualModels("QPN4Expected", "QPN4");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl5");
+  assertEqualModels("QPN5Expected", "QPN5");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl6");
+  assertEqualModels("QPN6Expected", "QPN6");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl7");
+  assertEqualModels("QPN7Expected", "QPN7");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl8");
+  assertEqualModels("QPN8Expected", "QPN8");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl9");
+  assertEqualModels("QPN9Expected", "QPN9");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl10");
+  assertEqualModels("QPN10Expected", "QPN10");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl11");
+  assertEqualModels("QPN11Expected", "QPN11");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl12");
+  assertEqualModels("QPN12Expected", "QPN12");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl13");
+  assertEqualModels("QPN13Expected", "QPN13");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl14");
+  assertEqualModels("QPN14Expected", "QPN14");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl15");
+  assertEqualModels("QPN15Expected", "QPN15");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl16");
+  assertEqualModels("QPN16Expected", "QPN16");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl17");
+  assertEqualModels("QPN17Expected", "QPN17");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl18");
+  assertEqualModels("QPN18Expected", "QPN18");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl19");
+  assertEqualModels("QPN19Expected", "QPN19");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl20");
+  assertEqualModels("QPN20Expected", "QPN20");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl21");
+  assertEqualModels("QPN21Expected", "QPN21");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl22");
+  assertEqualModels("QPN22Expected", "QPN22");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl23");
+  assertEqualModels("QPN23Expected", "QPN23");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl24");
+  assertEqualModels("QPN24Expected", "QPN24");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl25");
+  assertEqualModels("QPN25Expected", "QPN25");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl26");
+  assertEqualModels("QPN26Expected", "QPN26");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl27");
+  assertEqualModels("QPN27Expected", "QPN27");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl28");
+  assertEqualModels("QPN28Expected", "QPN28");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl29");
+  assertEqualModels("QPN29Expected", "QPN29");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl30");
+  assertEqualModels("QPN30Expected", "QPN30");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl31");
+  assertEqualModels("QPN31Expected", "QPN31");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl32");
+  assertEqualModels("QPN32Expected", "QPN32");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl33");
+  assertEqualModels("QPN33Expected", "QPN33");
+}
+
+@test
+operation compareModel() {
+  runTarget("atl34");
+  assertEqualModels("QPN34Expected", "QPN34");
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ASCII"?>
+<MultiClassQN:QNM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:MultiClassQN="MultiClassQN" xmi:id="_ScuukMc5EeqzFdz5F5jBBQ">
+  <workloads xmi:id="_ZruE0Mc5EeqzFdz5F5jBBQ" numOfJobs="10" serviceRequest="_xJCD0Mc5EeqzFdz5F5jBBQ" workloadRouting="_j39PUMc5EeqzFdz5F5jBBQ _qDj18Mc5EeqzFdz5F5jBBQ _t3sO4Mc5EeqzFdz5F5jBBQ" name="Workload1"/>
+  <nodes xsi:type="MultiClassQN:Server" xmi:id="_Tq2HgMc5EeqzFdz5F5jBBQ" name="Server1" outgoing="_gY9_8Mc5EeqzFdz5F5jBBQ" incoming="_r6384Mc5EeqzFdz5F5jBBQ" schedulingPolicy="PS" serviceRequest="_xJCD0Mc5EeqzFdz5F5jBBQ" workload="_ZruE0Mc5EeqzFdz5F5jBBQ"/>
+  <nodes xsi:type="MultiClassQN:ThinkDevice" xmi:id="_VXeBYMc5EeqzFdz5F5jBBQ" name="ThinkDevice1" outgoing="_mFVs4Mc5EeqzFdz5F5jBBQ" incoming="_gY9_8Mc5EeqzFdz5F5jBBQ" workload="_ZruE0Mc5EeqzFdz5F5jBBQ"/>
+  <nodes xsi:type="MultiClassQN:NonServerNode" xmi:id="_XoqA4Mc5EeqzFdz5F5jBBQ" name="NonServerNode1" outgoing="_r6384Mc5EeqzFdz5F5jBBQ" incoming="_mFVs4Mc5EeqzFdz5F5jBBQ" workload="_ZruE0Mc5EeqzFdz5F5jBBQ"/>
+  <arcs xmi:id="_gY9_8Mc5EeqzFdz5F5jBBQ" source="_Tq2HgMc5EeqzFdz5F5jBBQ" target="_VXeBYMc5EeqzFdz5F5jBBQ" WorkloadRouting="_j39PUMc5EeqzFdz5F5jBBQ" name="Arc1"/>
+  <arcs xmi:id="_mFVs4Mc5EeqzFdz5F5jBBQ" source="_VXeBYMc5EeqzFdz5F5jBBQ" target="_XoqA4Mc5EeqzFdz5F5jBBQ" WorkloadRouting="_qDj18Mc5EeqzFdz5F5jBBQ" name="Arc2"/>
+  <arcs xmi:id="_r6384Mc5EeqzFdz5F5jBBQ" source="_XoqA4Mc5EeqzFdz5F5jBBQ" target="_Tq2HgMc5EeqzFdz5F5jBBQ" WorkloadRouting="_t3sO4Mc5EeqzFdz5F5jBBQ" name="Arc3"/>
+  <serviceRequests xmi:id="_xJCD0Mc5EeqzFdz5F5jBBQ" server="_Tq2HgMc5EeqzFdz5F5jBBQ" workload="_ZruE0Mc5EeqzFdz5F5jBBQ">
+    <serviceParams>2.0</serviceParams>
+  </serviceRequests>
+  <workloadRoutings xmi:id="_j39PUMc5EeqzFdz5F5jBBQ" probability="1.0" arc="_gY9_8Mc5EeqzFdz5F5jBBQ" workload="_ZruE0Mc5EeqzFdz5F5jBBQ"/>
+  <workloadRoutings xmi:id="_qDj18Mc5EeqzFdz5F5jBBQ" probability="1.0" arc="_mFVs4Mc5EeqzFdz5F5jBBQ" workload="_ZruE0Mc5EeqzFdz5F5jBBQ"/>
+  <workloadRoutings xmi:id="_t3sO4Mc5EeqzFdz5F5jBBQ" probability="1.0" arc="_r6384Mc5EeqzFdz5F5jBBQ" workload="_ZruE0Mc5EeqzFdz5F5jBBQ"/>
+</MultiClassQN:QNM>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ASCII"?>
+<MultiClassQN:QNM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:MultiClassQN="MultiClassQN" xmi:id="_oTToUMDuEeqmc5EH0kOo9g">
+  <nodes xsi:type="MultiClassQN:Server" xmi:id="_qwjG0MDuEeqmc5EH0kOo9g" name="Server1"/>
+</MultiClassQN:QNM>

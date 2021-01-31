@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ASCII"?>
+<MultiClassQN:QNM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:MultiClassQN="MultiClassQN" xmi:id="_l4Kj0MTZEeqq38qv_HMB5Q">
+  <workloads xmi:id="_riFkQMTaEeqq38qv_HMB5Q" numOfJobs="3" name="Workload1"/>
+  <nodes xsi:type="MultiClassQN:ThinkDevice" xmi:id="_n7xaUMTZEeqq38qv_HMB5Q" name="ThinkDevice1" thinkTime="5.0" workload="_riFkQMTaEeqq38qv_HMB5Q"/>
+</MultiClassQN:QNM>
